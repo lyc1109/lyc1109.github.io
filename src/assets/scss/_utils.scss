@@ -1,0 +1,83 @@
+$primary: #32a8ee;
+$white: #fff;
+$weight-100: 100;
+$weight-200: 200;
+$weight-300: 300;
+$weight-400: 400;
+$weight-500: 500;
+$weight-600: 600;
+$weight-700: 700;
+$weight-800: 800;
+$weight-900: 900;
+@mixin border($num: 1px,$color: #ccc,$type: solid){
+  border: $num $type $color;
+}
+@mixin border-radius($num: 3px){
+  border-radius: $num;
+}
+@mixin box-shadow($nums: 1px 1px 1px 1px,$color: #ccc){
+  box-shadow: $nums $color;
+}
+
+.text-center{
+  text-align: center;
+}
+.flex{
+  display: flex;
+
+  .flex-item{
+    flex: 1;
+  }
+}
+.align-item-center{
+  align-items: center;
+}
+.justify-center{
+  justify-content: center;
+}
+.btn{
+  background: none;
+  border: 0 none;
+  //color: $white;
+  padding: 5px 20px;
+  @include border-radius;
+  cursor: pointer;
+  transition: opacity .5s ease-in-out;
+
+  &:hover{
+    opacity: .8;
+    filter: alpha(opacity=80);
+  }
+}
+.btn-primary{
+  background: $primary;
+  color: $white;
+}
+
+.weight-100{
+  font-weight: $weight-100;
+}
+.weight-200{
+  font-weight: $weight-200;
+}
+.weight-300{
+  font-weight: $weight-300;
+}
+.weight-normal{
+  font-weight: $weight-400;
+}
+.weight-500{
+  font-weight: $weight-500;
+}
+.weight-600{
+  font-weight: $weight-600;
+}
+.weight-700{
+  font-weight: $weight-700;
+}
+.weight-800{
+  font-weight: $weight-800;
+}
+.weight-900{
+  font-weight: $weight-900;
+}
