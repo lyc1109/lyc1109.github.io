@@ -43,8 +43,10 @@ module.exports = {
     cssSourceMap: true,
   },
 
+  // 生产环境构建配置
   build: {
     // Template for index.html
+    env: require('./prod.env'),
     index: path.resolve(__dirname, '../dist/index.html'),
 
     // Paths
@@ -71,6 +73,14 @@ module.exports = {
     // View the bundle analyzer report after build finishes:
     // `npm run build --report`
     // Set to `true` or `false` to always turn it on or off
-    bundleAnalyzerReport: process.env.npm_config_report
+    bundleAnalyzerReport: process.env.npm_config_report,
+    devServer: {
+      contentBase: path.join(__dirname, "dist"),
+      compress: true,
+      port: 8081,
+      watchOptions: {
+        poll: true
+      }
+    }
   }
 }
