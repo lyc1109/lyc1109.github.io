@@ -12,7 +12,7 @@
     z-index: 2;
     position: relative;
     height: 100%;
-    background-color: rgba(#520000,.9);
+    /*background-color: rgba(#520000,.9);*/
 
     &>div{
       position: absolute;
@@ -25,19 +25,14 @@
         width: 100px;
         height: 100px;
         @include border-radius(50%);
-        /*box-shadow: -2px -2px 3px #ccc,2px 2px 3px #ccc;*/
         @include border(3px,#fff);
       }
       .blog-name{
-        /*font-size: 18px;*/
         font-weight: normal;
-        /*color: #e16363;*/
         color: $white;
       }
       .btn{
         border-radius: 20px;
-        /*border: 1px solid #edaf6b;*/
-        /*color: #edaf6b;*/
         @include border(1px,$white);
         color: $white;
         background: none;
