@@ -12,7 +12,7 @@
     z-index: 2;
     position: relative;
     height: 100%;
-    /*background-color: rgba(#520000,.9);*/
+    background-color: rgba(#520000,.9);
 
     &>div{
       position: absolute;
