@@ -3,6 +3,7 @@ const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
+const StaticSiteGenerator = require('webpack-static-site-generator')
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -89,5 +90,17 @@ module.exports = {
     net: 'empty',
     tls: 'empty',
     child_process: 'empty'
-  }
+  },
+  // Add the plugin to the plugin array
+  plugins: [
+    new StaticSiteGenerator(
+      // path to the output dir
+      path.join(__dirname, './../dist'),
+      // array of routes to generate
+      [ '/','/about', '/blog', '/blog/view-1','/time' ],
+      // [OPTIONAL] element (in querySelector style) to wait for before rendering.
+      // defaults to 'body'
+      '.main-container'
+    )
+  ]
 }
