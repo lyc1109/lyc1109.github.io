@@ -48,7 +48,7 @@
           <h1 class="text-center blog-name">
             <span>LYC</span>
           </h1>
-          <button type="button" class="btn btn-primary weight-normal">My Blog</button>
+          <button type="button" class="btn btn-primary weight-normal" @click="blog">My Blog</button>
       </div>
     </div>
     <!--<div class="home-bg"></div>-->
@@ -60,6 +60,11 @@
     name: 'home',
     data () {
       return {}
+    },
+    methods: {
+      blog () {
+        this.$router.push('/blog')
+      }
     }
   }
 </script>

@@ -9,6 +9,16 @@ $weight-600: 600;
 $weight-700: 700;
 $weight-800: 800;
 $weight-900: 900;
+$value-100: 100%;
+$white: #fff;
+$black: #000;
+$text-size-s: 12px;
+$text-size-m: 14px;
+$text-size-l: 16px;
+$text-size-xl: 18px;
+$text-size-xxl: 20px;
+$color-light: #aaa;
+
 @mixin border($num: 1px,$color: #ccc,$type: solid){
   border: $num $type $color;
 }
@@ -27,6 +37,8 @@ $weight-900: 900;
 
   .flex-item{
     flex: 1;
+    @extend .justify-center;
+    @extend .align-item-center;
   }
 }
 .align-item-center{
@@ -52,6 +64,70 @@ $weight-900: 900;
 .btn-primary{
   background: $primary;
   color: $white;
+}
+
+.overflow-y-scroll{
+  overflow-y: scroll;
+}
+.overflow-hidden{
+  overflow: hidden;
+}
+
+.width-100{
+  width: $value-100;
+}
+.height-100{
+  width: $value-100;
+}
+
+.float-left{
+  float: left;
+}
+.float-right{
+  float: right;
+}
+.absolute{
+  position: absolute;
+}
+.relative{
+  position: relative;
+}
+.fixed{
+  position: fixed;
+}
+
+// Padding
+.padding{
+  padding: 20px;
+}
+.padding-top{
+  padding-top: 20px;
+}
+.padding-bottom{
+  padding-bottom: 20px;
+}
+.padding-left{
+  padding-left: 20px;
+}
+.padding-right{
+  padding-right: 20px;
+}
+
+// margin
+.margin{
+  margin: 20px;
+}
+.margin-top{
+  margin-top: 20px;
+}
+.margin-bottom{
+  margin-bottom: 20px;
+}
+.margin-left{
+  margin-left: 20px;
+}
+.margin-right{
+  margin-right: 20px;
 }
 
 .weight-100{
@@ -80,4 +156,31 @@ $weight-900: 900;
 }
 .weight-900{
   font-weight: $weight-900;
+}
+
+.color-primary{
+  color: $primary;
+}
+.bg-white{
+  background: $white;
+}
+
+.font-s{
+  font-size: $text-size-s;
+}
+.font-m{
+  font-size: $text-size-m;
+}
+.font-l{
+  font-size: $text-size-l;
+}
+.font-xl{
+  font-size: $text-size-xl;
+}
+.font-xxl{
+  font-size: $text-size-xxl;
+}
+
+.font-light{
+  color: $color-light;
 }

@@ -1,5 +1,10 @@
+<style scoped>
+  [v-cloak]{
+    display: none;
+  }
+</style>
 <template>
-  <div id="app">
+  <div id="app" v-cloak>
     <router-view/>
   </div>
 </template>
